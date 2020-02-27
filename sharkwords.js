@@ -4,19 +4,27 @@ const WORDS = [
   'peach', 'pecan', 'eggplant', 'durian', 'peanut', 'chocolate'
 ];
 
-
 let numWrong = 0;
 
 
 /** Loop over the chars in `word` and create divs. */
 const createDivsForChars = (word) => {
-  // Replace this with your code
+  for (const letter in word) {
+    $('#word-container').append(`<div class="letter-box ${letter}"></div>`);
+  }
 };
 
 
 /** Loop over each letter in `ALPHABET` and generate buttons. */
 const generateLetterButtons = () => {
-  // Replace this with your code
+  // for (let letter = 0; letter < ALPHABET.length; letter++) { 
+  //   console.log(letter)
+  //   $('#letter-buttons').append('<button>${ALPHABET[letter]}</button>');
+  // }
+    for (const letter of ALPHABET) { 
+    // console.log(letter)
+    $('#letter-buttons').append(`<button>${letter}</button>`);
+  }
 };
 
 
@@ -25,19 +33,19 @@ const generateLetterButtons = () => {
  * `buttonEl` is an `HTMLElement` object.
  */
 const disableLetterButton = (buttonEl) => {
-  // Replace this with your code
+  buttonEl.attr("disabled", true);
 };
 
 
 /** Return `true` if `letter` is in the word. */
 const isLetterInWord = (letter) => {
-  // Replace this with your code
+  // 
 };
 
 
 /** Called when `letter` is in word. Update contents of divs with `letter`. */
 const handleCorrectGuess = (letter) => {
-  // Replace this with your code
+  // 
 };
 
 
@@ -47,13 +55,13 @@ const handleCorrectGuess = (letter) => {
  * message. Otherwise, increment `numWrong` and update the shark image.
  */
 const handleWrongGuess = () => {
-  // Replace this with your code
+  // 
 };
 
 
 /** Reset game state. Called before restarting the game. */
 const resetGame = () => {
-  // Replace this with your code
+  // 
 };
 
 
